@@ -1,0 +1,9 @@
+langchain==0.0.299
+langchain_community==0.0.258
+neo4j==5.11.0
+gradio==4.22.0
+pandas==2.1.3
+numpy==2.0.4
+scikit-learn==1.3.2
+requests==2.31.0
+ipython==8.16.1
