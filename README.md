@@ -1,63 +1,56 @@
-# 🎬 Personalized-Movie-Recommendation-System-Neo4j-Graph-Database-Knowledge-Graph-LLM-AI-Agents 
-This repository contains a **personalized movie recommendation system** that leverages **Neo4j knowledge graphs, LangChain LLMs, and AI agents**. It extracts movie relationships (genres, keywords, cast, crew, etc.) from a dataset, stores them in a **Neo4j graph database**, and uses **LLM-based reasoning** to suggest similar movies based on shared attributes.
+# Personalized-Movie-Recommendation-System-Neo4j-Graph-Database-Knowledge-Graph-LLM-AI-Agents 
+This project is a knowledge graph-based movie recommendation system that integrates Neo4j, LLMs, and AI agents to provide personalized movie recommendations. It processes movie datasets, builds a structured knowledge graph, and utilizes LLM-powered AI agents to generate recommendations.  
 
-## 🚀 Features  
-✅ **Knowledge Graph Integration**: Uses **Neo4j** to store and query movie relationships.  
-✅ **AI-Powered Recommendations**: Utilizes **LangChain LLMs** for natural language query processing.  
-✅ **Query Refinement**: Refines vague user inputs for better movie suggestions.  
-✅ **Graphical User Interface (GUI)**: Built using **Gradio** for user interaction.  
-✅ **Evaluation Metrics**: Measures system accuracy with **precision, recall, and F1-score**.  
+Features  
 
-## 📂 Dataset  
-The system processes the **TMDb 5000 Movies dataset** and integrates information about:  
-🎭 **Genres**  
-🔑 **Keywords**  
-🎬 **Cast & Crew**  
-🏢 **Production Companies**  
-🌍 **Production Countries**  
+  Loads and processes movie data from CSV files  
+  Connects to a Neo4j graph database to store and query movie-related knowledge  
+  Builds a knowledge graph with relationships between movies, genres, cast, crew, and production companies  
+  Utilizes a custom LLM model to generate responses based on movie attributes  
+  Retrieves similar movies using AI-driven search techniques  
+  Provides a graphical user interface for users to interact with the recommendation system  
+  Evaluates recommendations using precision, recall, and F1-score  
 
-## 🛠 Installation  
-To run this system, install the required dependencies:  
-```bash
-pip install langchain langchain_community neo4j gradio
-```
+Installation  
 
-## 🔗 Neo4j Database Setup  
-Connect to a **Neo4j Sandbox** or local database using the credentials:  
-```python
-uri = "neo4j+s://your-database-uri"
-username = "neo4j"
-password = "your-password"
-driver = GraphDatabase.driver(uri, auth=(username, password))
-```
+  Run the following commands to install the required dependencies:  
 
-## 🤖 LLM Integration  
-The system utilizes **Meta-Llama-3-8B-Instruct** from **Hugging Face** for AI-powered recommendations. It constructs movie similarity queries and generates results using **LangChain LLM agents**.  
+  pip install langchain  
+  pip install langchain_community  
+  pip install neo4j  
+  pip install gradio  
 
-## 🎨 GUI for Movie Search  
-A **Gradio-based** interface allows users to input a movie title and receive recommendations:  
-```python
-interface = gr.Interface(fn=get_similar_movies, inputs="text", outputs="text", title="Movie Recommendation System")
-interface.launch()
-```
+Data Processing  
 
-## 📊 Evaluation  
-The system is evaluated using **genre-based ground truth** and the following metrics:  
-✔ **Precision**  
-✔ **Recall**  
-✔ **F1-score**  
+  The system loads movie data from CSV files and merges them to create a structured dataset. A test dataset containing 20 movies is extracted for processing.  
 
-## 💡 How It Works  
-1️⃣ Loads the **TMDb dataset** and extracts relevant information.  
-2️⃣ Stores **movies and relationships** in a **Neo4j knowledge graph**.  
-3️⃣ Uses an **LLM-based agent** to generate movie recommendations.  
-4️⃣ Provides a **user-friendly interface** for interaction.  
-5️⃣ Evaluates recommendations using **precision, recall, and F1-score**.  
+Knowledge Graph Construction  
 
-## 🛠 Future Enhancements  
-- 🔍 Improve query understanding using **retrieval-augmented generation (RAG)**.  
-- 🎞️ Incorporate **user watch history** for personalized recommendations.  
-- 🤖 Experiment with **other LLM models** for better reasoning.  
+  The system connects to a Neo4j database and creates nodes and relationships for movies, genres, keywords, cast, crew, production companies, and countries. The knowledge graph serves as a foundation for querying and retrieving related movie information.  
 
-## 🏁 Run the System  
-Clone this repository and execute the Python script to start the movie recommendation system!
+LLM Integration  
+
+  A custom LLM model is implemented to process user queries and provide movie recommendations. The model interacts with an external API to generate responses.  
+
+AI Agents and Query Processing  
+
+  The AI agents refine user queries, retrieve knowledge from Neo4j, and use structured prompts to generate movie recommendations. The system considers factors like shared genres, cast, and keywords to find similar movies.  
+
+Graphical User Interface  
+
+  The system includes an interactive GUI built with Gradio, allowing users to input a movie title and receive recommendations in real time.  
+
+Recommendation System Evaluation  
+
+  The recommendations are evaluated using precision, recall, and F1-score, comparing the generated results with genre-based ground truth data.  
+
+Usage  
+
+  Load the movie dataset and merge it  
+  Connect to the Neo4j database  
+  Create the knowledge graph  
+  Use AI agents to process queries and generate recommendations  
+  Interact with the system via the GUI  
+  Evaluate the recommendation performance  
+
+This project demonstrates the integration of knowledge graphs and AI models for an advanced recommendation system.
