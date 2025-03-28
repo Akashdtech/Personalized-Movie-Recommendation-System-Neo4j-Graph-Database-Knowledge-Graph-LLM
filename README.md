@@ -1,5 +1,5 @@
-# Personalized-Movie-Recommendation-System-Neo4j-Graph-Database-Knowledge-Graph-LLM-AI-Agents 
-This project is a knowledge graph-based movie recommendation system that integrates Neo4j, LLMs, and AI agents to provide personalized movie recommendations. It processes movie datasets, builds a structured knowledge graph, and utilizes LLM-powered AI agents to generate recommendations.  
+# Personalized-Movie-Recommendation-System-Neo4j-Graph-Database-Knowledge-Graph-LLM
+This project is a knowledge graph-based movie recommendation system that integrates Neo4j and LLM to provide personalized movie recommendations. It processes movie datasets, builds a structured knowledge graph, and utilizes LLM to generate recommendations.  
 
 Features:  
 
@@ -31,9 +31,9 @@ LLM Integration:
 
     A custom LLM model is implemented to process user queries and provide movie recommendations. The model interacts with an external API to generate responses.  
 
-AI Agents and Query Processing:  
+Query Processing:  
 
-    The AI agents refine user queries, retrieve knowledge from Neo4j, and use structured prompts to generate movie recommendations. The system considers factors like shared genres, cast, and keywords to find similar movies.  
+    The LLM refine user queries, retrieve knowledge from Neo4j, and use structured prompts to generate movie recommendations. The system considers factors like shared genres, cast, and keywords to find similar movies. 
 
 Graphical User Interface:
 
@@ -48,8 +48,8 @@ Usage:
     Load the movie dataset and merge it  
     Connect to the Neo4j database  
     Create the knowledge graph  
-    Use AI agents to process queries and generate recommendations  
+    Use LLM to process queries and generate recommendations  
     Interact with the system via the GUI  
     Evaluate the recommendation performance  
 
-This project demonstrates the integration of knowledge graphs and AI models for an advanced recommendation system.
+This project demonstrates the integration of knowledge graph, Neo4j, and LLM for an advanced recommendation system.
